@@ -1,19 +1,22 @@
 import './App.css'
 import Title from "./Title.jsx";
-function Description (){
-  return <h3>this is the Description</h3>
-}
+import ProductTab from './ProductTab.jsx';
+import Msgbox from './Msgbox.jsx';
+
+let name ="Kakashi Hatake"
 function App() {
   return (
     
       <div>
+        <p>Hi,I am {name.toUpperCase()}</p>
+        <Msgbox username="Naruto" textcolor="orange"/>
         <h1>This is my app component</h1>
         <p>inside app component we have</p>
         <Title/>
-        <Description/>
+        <ProductTab/>
       
       </div>  )
       
 }
 
-export default App
+export default App;

@@ -1,13 +1,19 @@
 import Product from "./Product";
 
 function ProductTab(){
-    let options=["high-performance","durable","fast"];
+   let styles = {
+        display: "flex",
+        flexWrap: "wrap",
+        alignItems: "center",
+        justifyContent: "center"
+    };
     return(
-        <>
-        { <Product title="Phone"price={20000} features={options}/> }
-        <Product title="Laptop" price={40000}features={{a:"high-performance",b:"durable",c:"fast"}}/>
-        <Product title="pen" price={10}/>
-        </>
+        <div style={styles}>
+       <Product title="samsung galaxy s25" idx={0}/>
+       <Product title="portronics hydra 10" idx={1}/>
+       <Product title="Boat nirvana anc" idx={2}/>
+       <Product title="acer nitro 5 144Hz" idx={3}/>
+        </div>
     );
 }
 

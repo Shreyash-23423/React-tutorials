@@ -1,6 +1,6 @@
 import './App.css'
-
 import ProductTab from './ProductTab.jsx';
+import Button from './Button.jsx';
 
 let name ="Kakashi Hatake"
 function App() {
@@ -10,6 +10,8 @@ function App() {
        <h2>Blockbuster sale buy now</h2>
         
         <ProductTab/>
+
+        <Button/>
       
       </div>  )
       

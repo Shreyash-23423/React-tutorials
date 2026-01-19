@@ -4,8 +4,9 @@ function handleClick(){
 function handleMouseOver(){
     console.log("Bye World");
 }
-function handledoubleClick(){
+function handledoubleClick(event){
     console.log("Double Clicked");
+    console.log(event);
 }
 export default function Button(){
     return(

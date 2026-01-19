@@ -1,6 +1,7 @@
 import './App.css'
 import ProductTab from './ProductTab.jsx';
 import Button from './Button.jsx';
+import Form from './Form.jsx';
 
 let name ="Kakashi Hatake"
 function App() {
@@ -12,6 +13,7 @@ function App() {
         <ProductTab/>
 
         <Button/>
+        <Form/>
       
       </div>  )
       

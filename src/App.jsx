@@ -1,22 +1,35 @@
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
 import './App.css'
-import ProductTab from './ProductTab.jsx';
-import Button from './Button.jsx';
-import Form from './Form.jsx';
 
-let name ="Kakashi Hatake"
 function App() {
-  return (
-    
-      <div>
-       <h2>Blockbuster sale buy now</h2>
-        
-        <ProductTab/>
+  const [count, setCount] = useState(0)
 
-        <Button/>
-        <Form/>
-      
-      </div>  )
-      
+  return (
+    <>
+      <div>
+        <a href="https://vite.dev" target="_blank">
+          <img src={viteLogo} className="logo" alt="Vite logo" />
+        </a>
+        <a href="https://react.dev" target="_blank">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
+      </div>
+      <h1>Vite + React</h1>
+      <div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
+        <p>
+          Edit <code>src/App.jsx</code> and save to test HMR
+        </p>
+      </div>
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
+    </>
+  )
 }
 
-export default App;
+export default App

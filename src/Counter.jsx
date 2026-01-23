@@ -4,8 +4,16 @@ export default function Counter(){
 
     let [count, setCount] = useState(0);
 
+    // let increment = ()=>{
+    //     setCount(count + 1);
+    // }
     let increment = ()=>{
-        setCount(count + 1);
+        setCount((currcount)=> {
+            return currcount + 1;
+        });
+        setCount((currcount)=> {
+            return currcount + 1;
+        });
     }
     return(
         <>

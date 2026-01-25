@@ -9,13 +9,19 @@ export default function TodoList() {
 
     let addNewTask = () => {    
     console.log("Add Task button clicked");
-    setTodos([...todos, {task: newTodo, id: uuidv4()}]);
+    setTodos((prevTodos) => {
+        return [...prevTodos, {task: newTodo, id: uuidv4()}];
+    });
     setNewTodo("");
    };
 
    let upadteTodoValue = (event) => {
     setNewTodo(event.target.value);
    }
+   let deleteTodo = (id) => {
+    setTodos((prevTodos) => todos.filter((prevTodos)=> prevTodos.id != id));
+   }
+
     return (
         <div>
             <h1>Todo List</h1>
@@ -29,9 +35,13 @@ export default function TodoList() {
                 <br /><br /><br /><br /><br />
                 <hr />
                 <h4>Your Tasks:</h4>
-                <ul>
+                <ul>            
                     {todos.map((todo) => (
-                        <li key={todo.id}>{todo.task}</li>
+                        <li key={todo.id}>
+                        <span>{todo.task}</span>
+                        &nbsp; &nbsp;&nbsp;
+                        <button onClick={() => deleteTodo(todo.id)}>delete</button>
+                        </li>
                     ))}
                 </ul>
             </div>

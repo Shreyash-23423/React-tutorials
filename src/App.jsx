@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import LudoBoard from './LudoBoard.jsx'
 import TodoList from './TodoList.jsx'
+import Lottery from './Lottery.jsx'
 
 function App() {
 
@@ -11,7 +12,8 @@ function App() {
     <>
       <div>
         {/* <LudoBoard /> */}
-        <TodoList />
+        {/* <TodoList /> */}
+        <Lottery />
       </div>
     </>
   )

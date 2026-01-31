@@ -5,4 +5,7 @@ function genticket(n) {
     }
     return arr;
 }   
-export { genticket };
+function sum(arr){
+    return arr.reduce((sum,current)=>sum+current,0);
+}
+export { genticket, sum };

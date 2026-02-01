@@ -5,13 +5,16 @@ import Lottery from './Lottery.jsx'
 
 function App() {
 
+  let winconditions = (ticket) => {
+    return sum(ticket)===15;
+  };
   return (
     <>
       <>
         {/* <LudoBoard /> */}
         {/* <TodoList /> */}
         {/* <Lottery /> */}
-        <Lottery n={3} winningsum={15}/>
+        <Lottery n={3} wincondition={winconditions} />
       </>
     </>
   )

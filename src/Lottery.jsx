@@ -5,9 +5,9 @@ import Ticket from "./Ticket";
 
 
 
-export default function Lottery({n=3,winningsum=15}) {
+export default function Lottery({n=3,wincondition}) {
     let [ticket,setTicket] = useState(genticket(n));
-    let iswinning = sum(ticket)===winningsum;
+    let iswinning = wincondition(ticket);
 
     let buyticket = () => {
        setTicket(genticket(n));

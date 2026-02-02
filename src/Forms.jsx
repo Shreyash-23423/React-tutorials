@@ -8,7 +8,14 @@ export default function Forms() {
   }
   return (
    <form >
-    <input type="text" placeholder="enter your full name" value={fullName} onChange={handlenamechange} />
+    <label htmlFor="username">Full name</label>
+    <input 
+      type="text" 
+      placeholder="enter your full name" 
+      value={fullName}
+      onChange={handlenamechange}
+      id="username"
+      />
     {/* <input type="text" placeholder="enter your full name" value={fullName} onChange={(e) => setFullName(e.target.value)} /> */}
     <button>Submit</button>
    </form>

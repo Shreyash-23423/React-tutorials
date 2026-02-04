@@ -1,6 +1,7 @@
 import './App.css'
 import Forms from './Forms.jsx'
 import Commentsforms from './Commentsform.jsx'
+import Counter from './Counter.jsx'
 
 function App() {
 
@@ -8,7 +9,8 @@ function App() {
   return (
     <>
       {/* <Forms/> */}
-      <Commentsforms/>
+      {/* <Commentsforms/> */}
+      <Counter/>
     </>
   )
 }

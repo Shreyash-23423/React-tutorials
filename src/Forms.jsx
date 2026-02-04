@@ -44,6 +44,8 @@ export default function Forms() {
        onChange={handleinputchange}
         name="username"
        />
+       <br />
+       <br />
      <label htmlFor="password">Password</label>
      <input 
        type="text" 

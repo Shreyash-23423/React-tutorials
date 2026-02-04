@@ -1,17 +1,23 @@
 import { useEffect, useState } from "react";
 export default function Counter(){
-    let [count,setcount]= useState(0);
+    let [countx,setcountx]= useState(0);
+    let [county,setcounty]= useState(0);
 
-    let inccount=()=>{
-        setcount((currcount)=> currcount+1);
+    let inccountx=()=>{
+        setcountx((currcount)=> currcount+1);
+    };
+    let inccounty=()=>{
+        setcounty((currcount)=> currcount+1);
     };
     useEffect(function printsomething(){
         console.log("this is a side-effect")
-    })
+    },[countx]);
     return (
         <div>
-            <h3>count ={count}</h3>
-            <button onClick={inccount}>+1</button>
+            <h3>countx ={countx}</h3>
+            <button onClick={inccountx}>+1</button>
+            <h3>county ={county}</h3>
+            <button onClick={inccounty}>+1</button>
         </div>
     );
     }
